@@ -1,0 +1,6 @@
+dist
+node_modules
+cache
+auth.json
+out.docx
+.vscode

@@ -1,0 +1,32 @@
+{
+	"type": "module",
+	"name": "lessonkeygen",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "./build.mjs",
+		"start": "node dist/",
+		"dev": "node build.mjs && node dist/"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/mz": "^2.7.4",
+		"@types/node": "^16.11.6",
+		"esbuild": "^0.13.10",
+		"typescript": "^4.5.0-dev.20211029",
+		"zx": "^4.2.0"
+	},
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"docx": "^7.1.1",
+		"entities": "^3.0.1",
+		"fflate": "^0.7.1",
+		"highlight.js": "^11.3.1",
+		"mz": "^2.7.0",
+		"node-fetch": "^3.0.0",
+		"node-html-parser": "^5.1.0"
+	}
+}
