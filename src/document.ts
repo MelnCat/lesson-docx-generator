@@ -21,6 +21,7 @@ import xml from "highlight.js/lib/languages/xml";
 import css from "highlight.js/lib/languages/css";
 import javascript from "highlight.js/lib/languages/javascript";
 import entities from "entities";
+import { authData } from "./util.js";
 
 hljs.registerLanguage("xml", xml);
 hljs.registerLanguage("css", css);
