@@ -45,6 +45,7 @@ const themeColors = {
 	number: "#b5cea8",
 	"selector-id": "#569cd6",
 	"selector-class": "#569cd6",
+	built_in: "#ce9178"
 } as Record<string, string>;
 
 const themeOverrides = {
