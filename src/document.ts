@@ -120,16 +120,19 @@ export const codeBlock = (str: string, lang: string) =>
 		},
 	});
 
-export const exerciseLink = (exercise: string) =>
-	new Paragraph({
+export const exerciseLink = (exercise: string) => {
+	const link = `${authData.path}Lesson ${exercise.split("E")[0]}/Exercises/${exercise}/index.html`;
+	return new Paragraph({
 		children: [
 			new ExternalHyperlink({
-				children: [new TextRun(`https://replit.com/@${authData.username}/${exercise}`)],
-				link: `https://replit.com/@${authData.username}/${exercise}`,
+				children: [new TextRun(link)],
+				link,
 			}),
 		],
 		style: "link",
 	});
+}
+	
 
 export const exerciseTitle = (exercise: string) =>
 	new Paragraph({
