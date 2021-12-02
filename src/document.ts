@@ -121,7 +121,8 @@ export const codeBlock = (str: string, lang: string) =>
 	});
 
 export const exerciseLink = (exercise: string) => {
-	const link = `${authData.path}Lesson ${exercise.split("E")[0]}/Exercises/${exercise}/index.html`;
+	const n = exercise.split("E")[0];
+	const link = `${authData.path}Lesson ${n}/Exercises/${exercise}/${+n >= 28 ? "index.js" : "index.html"}`;
 	return new Paragraph({
 		children: [
 			new ExternalHyperlink({
@@ -149,7 +150,7 @@ export const listFiles = (files: Map<string, Buffer>) =>
 				: (a.match(/\//g)?.length ?? 0) - (b.match(/\//g)?.length ?? 0) || a.localeCompare(b)
 		)
 		.flatMap(([k, v], _, a) => [
-			...(a.length > 1
+			...(k !== "index.html"
 				? [
 						new Paragraph({
 							text: k,
